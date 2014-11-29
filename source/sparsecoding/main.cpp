@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 
 
     //  load, convert, resize and corrupt image
-    cv::Mat img = cv::imread("../../data/standard/barbara.png", CV_LOAD_IMAGE_GRAYSCALE);
+    cv::Mat img = cv::imread("../../data/standard/barbara.png", cv::IMREAD_GRAYSCALE);
     // cv::resize(img, img, cv::Size(128, 128));
 
     cv::Mat noise = cv::Mat(img.size(), img.type());

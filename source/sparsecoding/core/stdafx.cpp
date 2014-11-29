@@ -101,7 +101,7 @@ void loadDisparityMap(int argc, char* argv[], cv::Mat& disp)
 
     //  load image
     logger.push("load " + name);
-    disp = cv::imread(name, CV_LOAD_IMAGE_GRAYSCALE);
+    disp = cv::imread(name, cv::IMREAD_GRAYSCALE);
     logger.pop(!disp.empty());
 }
 

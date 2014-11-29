@@ -172,7 +172,7 @@ void Visualizer::drawMatching(const cv::Mat& image,
         const cv::Point2f& p1 = keypoints1[i].pt;
         const cv::Point2f& p2 = keypoints2[i].pt;
 
-        cv::circle(output, p1, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, CV_FILLED);
+        cv::circle(output, p1, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, cv::FILLED);
         cv::line(output, p1, p2, Visualizer::lineColor, Visualizer::lineThickness);
     }
 }
@@ -226,10 +226,10 @@ void Visualizer::drawMatching(const cv::Mat& image,
         const cv::Point2f& p2 = keypoints2[id2].pt;
 
         if (targetImage <= 1) {
-            cv::circle(output, p1, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, CV_FILLED);
+            cv::circle(output, p1, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, cv::FILLED);
             cv::line(output, p1, p2, Visualizer::lineColor, Visualizer::lineThickness);
         } else {
-            cv::circle(output, p2, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, CV_FILLED);
+            cv::circle(output, p2, Visualizer::pointRadius, Visualizer::pointColor, Visualizer::circleThickness, cv::FILLED);
             cv::line(output, p2, p1, Visualizer::lineColor, Visualizer::lineThickness);
         }
     }

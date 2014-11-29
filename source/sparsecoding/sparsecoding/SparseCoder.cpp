@@ -7,6 +7,7 @@
 
 #include <iomanip>
 #include <iostream>
+#include <set>
 
 using namespace std;
 
@@ -146,7 +147,7 @@ void SparseCoder::encode(
     cv::multiply(D_, D_, DD);
 
     cv::Mat dd;
-    cv::reduce(DD, dd, 0, CV_REDUCE_SUM);
+    cv::reduce(DD, dd, 0, cv::REDUCE_SUM);
 
     //  encode each sample
     for (int i = 0; i < X.cols; i++)
