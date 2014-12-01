@@ -1,4 +1,4 @@
-Sparsec Coding
+Sparse Coding
 ============
 
 <img src="results/dict.png" width=30% />
