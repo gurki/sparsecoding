@@ -54,8 +54,15 @@ int main(int argc, char* argv[])
 
 
     //  load, convert, resize and corrupt image
-    cv::Mat img = cv::imread("../../data/standard/barbara.png", cv::IMREAD_GRAYSCALE);
+    string  dfile = "../../data/standard/barbara.png";
+    cv::Mat img   = cv::imread(dfile, cv::IMREAD_GRAYSCALE);
     // cv::resize(img, img, cv::Size(128, 128));
+    if(img.empty()) {
+        log << "Test image not found" << endl;
+        log << "Please replace \"" << dfile << '"' << endl;
+        return EXIT_FAILURE;
+    }
+
 
     cv::Mat noise = cv::Mat(img.size(), img.type());
     cv::randn(noise, 0, 20);

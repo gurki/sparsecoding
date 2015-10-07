@@ -7,7 +7,7 @@ OPENCV_LIBS = \
     -lopencv_imgproc \
     -lopencv_video \
     -lopencv_objdetect \
-    -lopencv_nonfree \
+    -lopencv_imgcodecs \
     -lopencv_features2d \
     -lopencv_flann \
     -lopencv_calib3d
