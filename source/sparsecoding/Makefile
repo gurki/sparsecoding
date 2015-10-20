@@ -1,4 +1,4 @@
-include makefiles/defaults.mk
+#include makefiles/defaults.mk
 include makefiles/opencv.mk
 
 
@@ -14,5 +14,8 @@ FILES += \
 
 default: main
 
-main: 
+main: $(FILES)
 	clang++ -o main $(FILES) $(LIBS) $(INCS) $(OPTS)
+
+clean:
+	rm make

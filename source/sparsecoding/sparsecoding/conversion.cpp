@@ -135,7 +135,7 @@ void selectSample(
 
     S = cv::Mat::zeros(X.rows, n, X.type());
 
-    std::srand((unsigned int)std::time(0));
+    std::srand((unsigned int)time(0));
 
     int count = 0;
 
